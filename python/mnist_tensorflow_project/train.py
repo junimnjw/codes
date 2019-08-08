@@ -39,8 +39,8 @@ trX, trY, teX, teY = mnist.train.images, mnist.train.labels, mnist.test.images, 
 trX = trX.reshape(-1, 28, 28, 1)  # 28x28x1 input img
 teX = teX.reshape(-1, 28, 28, 1)  # 28x28x1 input img
 
-X = tf.placeholder("float", [None, 28, 28, 1])
-Y = tf.placeholder("float", [None, 10])
+X = tf.placeholder("float", [None, 28, 28, 1], name="myInput")
+Y = tf.placeholder("float", [None, 10], name="myOutput")
 
 w = init_weights([3, 3, 1, 32])       # 3x3x1 conv, 32 outputs
 w2 = init_weights([3, 3, 32, 64])     # 3x3x32 conv, 64 outputs
@@ -52,12 +52,13 @@ p_keep_conv = tf.placeholder("float")
 p_keep_hidden = tf.placeholder("float")
 py_x = model(X, w, w2, w3, w4, w_o, p_keep_conv, p_keep_hidden)
 
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=py_x, labels=Y))
+#cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=py_x, labels=Y),)
+cost = tf.reduce_mean(tf.nn.softmax(logits=py_x))
 train_op = tf.train.RMSPropOptimizer(0.001, 0.9).minimize(cost)
 predict_op = tf.argmax(py_x, 1)
 
 
-saver = tf.train.Saver()
+#saver = tf.train.Saver()
 # Launch the graph in a session
 with tf.Session() as sess:
     # you need to initialize all variables
@@ -79,8 +80,9 @@ with tf.Session() as sess:
                                                          Y: teY[test_indices],
                                                          p_keep_conv: 1.0,
                                                          p_keep_hidden: 1.0})))
-    saver.save(sess, "my_mnist_trained_model.ckpt")
-    tf.io.write_graph(sess.graph_def, ".", 'my_mnist_trained_model.pb', as_text=False)
+#    saver.save(sess, "my_mnist_trained_model.ckpt")
+#    tf.io.write_graph(sess.graph_def, ".", 'my_mnist_trained_model.pb', as_text=False)
+    tf.saved_model.simple_save(sess, "./saved_log/", inputs={"myInput": X}, outputs={"Mean": cost})
 
 
 
