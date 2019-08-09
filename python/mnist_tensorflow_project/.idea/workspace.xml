@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afd9ebb8-6c03-4ba6-a3b3-8f8ef6ef0dbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mnist_tensorflow_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mnist_tensorflow_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/import_pb_to_tensorboard.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_mnist_trained_model.ckpt.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_mnist_trained_model.ckpt.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_mnist_trained_model.ckpt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_mnist_trained_model.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_log/saved_model.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_log/variables/variables.data-00000-of-00001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_log/variables/variables.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="54" column="62" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="62" />
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -54,8 +48,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="770" />
-    <option name="y" value="124" />
+    <option name="x" value="381" />
+    <option name="y" value="153" />
     <option name="width" value="1400" />
     <option name="height" value="800" />
   </component>
@@ -72,11 +66,6 @@
             <path>
               <item name="mnist_tensorflow_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="mnist_tensorflow_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mnist_tensorflow_project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mnist_tensorflow_project" type="462c0819:PsiDirectoryNode" />
-              <item name="saved_log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -171,8 +160,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="54" column="62" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="62" />
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

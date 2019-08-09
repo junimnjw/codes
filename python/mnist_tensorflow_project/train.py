@@ -5,6 +5,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 batch_size = 128
 test_size = 256
 
+
 def init_weights(shape):
     return tf.Variable(tf.random_normal(shape, stddev=0.01))
 
